@@ -1,9 +1,20 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import Header from '../components/header/header'
+
 import EnergieSelect from '../components/energies/energieSlect/energieSelect'
 
+
 export default function Home() {
+
+  const data = {
+    titre: "Points de Productions Electriques Raccordés au réseau ENEDIS",
+    description: `Trouver facilement les données relatives aux producteur français 
+    d'énergie électrique raccordé au réseau de distribution. 
+    Classé en fonction de leur puissance, de leur type et de leur années d'implantation sur le réseau. Bon voyage !`
+  };
+
   return (
     <>
       <Head>
@@ -12,7 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header data={data}/>
+
       <EnergieSelect />
+
     </>
 
 
