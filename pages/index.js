@@ -33,7 +33,7 @@ export default function Home() {
 
         <Header data={data} color={palette}/>
 
-        <EnergieSelect />
+        <EnergieSelect color={palette}/>
 
       </section>
 
