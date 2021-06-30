@@ -6,7 +6,9 @@ export default function Card(props){
                 <img className={styles.img} src={props.src} />
             </figure>
             <figcaption className={styles.title}>
-                {props.title}
+                <h4 className={styles.titleDescription}>{props.title}</h4>
+                <p style={{color: props.color[1]}}>{props.description}</p>
+                
             </figcaption>
         </section>
     </>
