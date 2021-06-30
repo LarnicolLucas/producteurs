@@ -3,6 +3,7 @@ import styles from './content.module.sass'
 
 
 export default function Content(props){
+
     return <>
 
         <section className={styles.container}>
@@ -12,7 +13,7 @@ export default function Content(props){
             <main className={styles.main}>
 
                 <h1>
-                    {props.data.titre}
+                    {props.data.titre[0]}<strong style={{color: props.color[3]}}>{props.data.titre[1]}</strong>
                 </h1>
                 <p className={styles.p} style={{color: props.color[1]}}>
                     {props.data.description}

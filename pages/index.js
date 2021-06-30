@@ -10,7 +10,7 @@ import EnergieSelect from '../components/energies/energieSlect/energieSelect'
 export default function Home() {
 
   const data = {
-    titre: "Points de Productions Electriques Raccordés au réseau ENEDIS",
+    titre: ["Producteurs Electriques du réseau ", "ENEDIS" ],
     description: `Trouver facilement les données relatives aux producteur français 
     d'énergie électrique raccordé au réseau de distribution. 
     Classé en fonction de leur puissance, de leur type et de leur années d'implantation sur le réseau. Bon voyage !`
