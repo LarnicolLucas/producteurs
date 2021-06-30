@@ -9,7 +9,7 @@ export default function Header(props){
         <header className={styles.container}>
 
             <Logo />
-            <Content data={props.data}/>
+            <Content data={props.data} color={props.color}/>
 
         </header>
     </>
