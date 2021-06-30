@@ -14,7 +14,7 @@ export default function Content(props){
                 <h1>
                     {props.data.titre}
                 </h1>
-                <p className={styles.p}>
+                <p className={styles.p} style={{color: props.color[1]}}>
                     {props.data.description}
                 </p>
                 <figure className={styles.figure2}>
