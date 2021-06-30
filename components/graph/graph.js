@@ -17,7 +17,7 @@ export default function Graph(props){
     const params = Params(props.datas);
 
     useEffect(()=> {
-        console.log(canvas.current)
+
         const graph = new Chart(canvas.current.getContext('2d'), params);
 
         //return ()=> delete graph
