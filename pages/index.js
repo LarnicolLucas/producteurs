@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import palette from '../components/palette/palette'
 
 import Header from '../components/header/header'
 
@@ -15,6 +16,11 @@ export default function Home() {
     Classé en fonction de leur puissance, de leur type et de leur années d'implantation sur le réseau. Bon voyage !`
   };
 
+  const style= {
+    background: palette[0],
+    color: palette[2]
+  }
+
   return (
     <>
       <Head>
@@ -23,9 +29,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header data={data}/>
+      <section style={style}>
 
-      <EnergieSelect />
+        <Header data={data} color={palette}/>
+
+        <EnergieSelect />
+
+      </section>
 
     </>
 
