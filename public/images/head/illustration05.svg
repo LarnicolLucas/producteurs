@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,10 +54,10 @@
      transform="translate(-53.313541,-58.038316)">
     <path
        id="path1409"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.61224;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;fill-rule:evenodd;stroke:#ef8354;stroke-width:1.61224;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        d="m 68.224775,58.844436 a 14.105041,10.507405 0 0 0 -14.105114,10.507459 14.105041,10.507405 0 0 0 5.2e-4,0.07105 h -5.2e-4 V 109.79104 A 14.105041,10.507405 0 0 0 68.224775,120.2985 14.105041,10.507405 0 0 0 82.329889,109.79104 V 69.351895 A 14.105041,10.507405 0 0 0 68.224775,58.844436 Z" />
     <circle
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ef8354;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="path1454"
        cx="68.224777"
        cy="78.376785"

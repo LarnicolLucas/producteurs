@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,54 +64,54 @@
      id="layer1"
      transform="translate(5.2916765,-42.333336)">
     <ellipse
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.3007;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ef8354;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.3007;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1663"
        cx="95.935532"
        cy="181.72232"
        rx="84.545479"
        ry="35.769241" />
     <ellipse
-       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1.153;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#2d3142;fill-rule:evenodd;stroke:none;stroke-width:1.153;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        id="path1663-8"
        cx="95.935532"
        cy="175.92133"
        rx="74.934669"
        ry="31.703131" />
     <ellipse
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.858459;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ef8354;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.858459;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1663-3"
        cx="95.935532"
        cy="169.81456"
        rx="55.800018"
        ry="23.6077" />
     <ellipse
-       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.761;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#2d3142;fill-rule:evenodd;stroke:none;stroke-width:0.761;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        id="path1663-8-9"
        cx="95.935532"
        cy="165.9859"
        rx="49.456886"
        ry="20.924065" />
     <ellipse
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.566584;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ef8354;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.566584;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1663-3-4"
        cx="95.935532"
        cy="161.35361"
        rx="36.828011"
        ry="15.581081" />
     <ellipse
-       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.502176;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#2d3142;fill-rule:evenodd;stroke:none;stroke-width:0.502176;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        id="path1663-8-9-1"
        cx="95.935532"
        cy="158.82668"
        rx="32.641544"
        ry="13.809883" />
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:1.25867;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ef8354;stroke:none;stroke-width:1.25867;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        d="m 93.698521,139.44528 c 50.890039,0 28.487989,-52.86308 9.949099,-79.39387 -3.969439,-4.99863 -9.689759,-5.75485 -13.582779,-0.75248 -20.04478,28.37948 -41.60193,80.14635 3.63368,80.14635 z"
        id="path2365"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:#ffffff;stroke:none;stroke-width:1.25867;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#2d3142;stroke:none;stroke-width:1.25867;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
        d="m 111.125,111.125 c -1.26275,7.5765 -9.90711,13.08681 -14.762929,14.8761 -4.17831,1.53964 6.972709,8.5841 15.228149,0.50021 8.25547,-8.0839 5.84851,-17.9018 -0.46522,-15.37631 z"
        id="path2387"
        sodipodi:nodetypes="cssc" />
