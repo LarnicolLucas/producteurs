@@ -15,8 +15,7 @@ export default function Graph(props){
 
     const canvas = useRef();
     const params = Params(props.datas);
-    console.log(params)
-
+    
     useEffect(()=> {
 
         const graph = new Chart(canvas.current.getContext('2d'), params);
