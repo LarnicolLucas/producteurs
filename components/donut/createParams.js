@@ -28,10 +28,20 @@ export default function params(params, ctx){
             },
             scales: {
               x: {
-                stacked: true,
+                display: false
               },
               y: {
-                stacked: true
+                display: false
+              }
+            },
+            plugins : {
+              title:{
+                color: params.color[2]
+              },
+              legend: {
+                labels: {
+                  color: params.color[2]
+                }
               }
             }
           }
