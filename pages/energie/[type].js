@@ -7,13 +7,16 @@ import palette from '../../components/palette/palette'
 
 import Requete from '../../components/requetes/requetes'
 import createList from '../../components/createList/createList'
+import createDonut from '../../components/createList/createDonut'
 
 import Graph from '../../components/graph/graph'
+import Donut from '../../components/donut/donut'
 
 
 export default function Home() {
 
-  const [listData, setListData] = useState([]);
+  const [listData, setListData] = useState({});
+  const [donutData, setDonutData] = useState({});
 
   const type = 'F4'
 
@@ -21,20 +24,24 @@ export default function Home() {
     background: palette[0],
     color: palette[2]
   };
- 
 
   useEffect(async ()=>{
 
     try{
-        const res = await fetch(Requete(-1, type, 0, 2021));
-        const data = await res.json();
-        const newList = createList(data.records);
-        setListData(newList);
+        const res0 = await fetch(Requete(-1, type, 0, 2021));
+        const res1 = await fetch(Requete(7, null, 0, 2021));
+        const data0 = await res0.json();
+        const data1 = await res1.json();
+        const newList0 = createList(data0.records);
+        const newList1 = createDonut(data1.records);
+        setListData(newList0);
+        setDonutData(newList1);
 
     } catch(err){
         console.log(err)
     }
   }, []);
+
 
   return (
     <>
@@ -48,14 +55,24 @@ export default function Home() {
 
         <article className={styles.graphContainer}>
 
-        <Graph datas={{
-          label : `Evolution du nombre des producteur de type ${type} raccordé au réseau`,
-          data: listData.data,
-          legends: listData.legend,
-          color: palette[2]
-          }}
-          />
-          <div></div>
+          <Graph datas={{
+            label : `Evolution du nombre des producteur de type ${type} raccordé au réseau`,
+            data: listData.data,
+            legends: listData.legend,
+            color: palette
+            }}
+            />
+
+        </article>
+        <article className={styles.graphContainer}>
+
+          <Donut datas={{
+            label : `Répartition des points de production raccordé au réseau`,
+            data: donutData.data,
+            legends: donutData.data,
+            color: palette
+            }}
+            />
 
         </article>
 
