@@ -10,6 +10,7 @@ import palette from '../../components/palette/palette'
 import Requete from '../../components/requetes/requetes'
 import createList from '../../components/createList/createList'
 import createDonut from '../../components/createList/createDonut'
+import createDonutWithoutF5 from '../../components/createList/createDonutWithoutF5'
 
 import Graph from '../../components/graph/graph'
 import Donut from '../../components/donut/donut'
@@ -19,6 +20,7 @@ export default function Home() {
 
   const [listData, setListData] = useState({});
   const [donutData, setDonutData] = useState({});
+  const [donutData2, setDonutData2] = useState({})
 
   const router = useRouter();
   const { type } = router.query;
@@ -39,8 +41,10 @@ export default function Home() {
           const data1 = await res1.json();
           const newList0 = createList(data0.records);
           const newList1 = createDonut(data1.records);
+          const newList2 = createDonutWithoutF5(data1.records);
           setListData(newList0);
           setDonutData(newList1);
+          setDonutData2(newList2);
 
       } catch(err){
           console.log(err)
@@ -76,6 +80,17 @@ export default function Home() {
             label : `Répartition des points de production raccordé au réseau`,
             data: donutData.data,
             legends: donutData.data,
+            color: palette
+            }}
+            />
+
+        </article>
+        <article className={styles.graphContainer}>
+
+          <Donut datas={{
+            label : `Répartition des points de production raccordé au réseau sans panneau solaires`,
+            data: donutData2.data,
+            legends: donutData2.data,
             color: palette
             }}
             />
