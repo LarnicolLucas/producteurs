@@ -1,3 +1,5 @@
+import {useRouter} from 'next/router'
+
 import styles from './energie.module.sass'
 
 import {useEffect, useState} from 'react'
@@ -18,7 +20,8 @@ export default function Home() {
   const [listData, setListData] = useState({});
   const [donutData, setDonutData] = useState({});
 
-  const type = 'F4'
+  const router = useRouter();
+  const { type } = router.query;
 
   const style= {
     background: palette[0],
@@ -27,20 +30,23 @@ export default function Home() {
 
   useEffect(async ()=>{
 
-    try{
-        const res0 = await fetch(Requete(-1, type, 0, 2021));
-        const res1 = await fetch(Requete(7, null, 0, 2021));
-        const data0 = await res0.json();
-        const data1 = await res1.json();
-        const newList0 = createList(data0.records);
-        const newList1 = createDonut(data1.records);
-        setListData(newList0);
-        setDonutData(newList1);
+    if(type != undefined){ 
 
-    } catch(err){
-        console.log(err)
+      try{
+          const res0 = await fetch(Requete(-1, type, 0, 2021));
+          const res1 = await fetch(Requete(7, null, 0, 2021));
+          const data0 = await res0.json();
+          const data1 = await res1.json();
+          const newList0 = createList(data0.records);
+          const newList1 = createDonut(data1.records);
+          setListData(newList0);
+          setDonutData(newList1);
+
+      } catch(err){
+          console.log(err)
+      }
     }
-  }, []);
+  }, [type]);
 
 
   return (
