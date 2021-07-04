@@ -1,17 +1,9 @@
 import Chart from 'chart.js/auto';
 import {useRef, useEffect} from 'react'
 import Params from './createParams'
+import styles from './graph.module.sass'
 
 export default function Graph(props){
-
-    /*<Graph datas={{
-        label : 'Graph Test',
-        data: [50, 10, 50, 90],
-        legends: ["Sisi","Test", "Kariis", "test"],
-        color: color
-        }}
-        />
-    */
 
     const canvas = useRef();
     const params = Params(props.datas);
@@ -24,6 +16,15 @@ export default function Graph(props){
     })
     
     return <>
-        <canvas ref={canvas} width="400" height="400"></canvas>
+        <section className={styles.container}>
+            <figcaption className={styles.figcaption}>
+
+                <h3>{props.datas.label}</h3>
+
+            </figcaption>
+            <figure className={styles.figure}>
+                <canvas ref={canvas} width="400" height="200"></canvas>
+            </figure>
+        </section>
     </>
 }

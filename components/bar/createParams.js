@@ -3,7 +3,7 @@ export default function params(params){
     const data = {
         labels: params.legends,
         datasets: [{
-            label: params.label,
+            label: '',
             data: params.data,
             backgroundColor: params.color
         }]
@@ -24,17 +24,7 @@ export default function params(params){
                       color: params.colorTxt[2]
                     }
                 }
-            },
-            plugins : {
-                title:{
-                  color: params.colorTxt[2]
-                },
-                legend: {
-                  labels: {
-                    color: params.colorTxt[2]
-                  }
-                }
-              }
+            }
         }
     }
 }

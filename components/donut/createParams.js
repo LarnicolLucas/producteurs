@@ -41,9 +41,11 @@ export default function params(params, ctx){
               legend: {
                 labels: {
                   color: params.colorTxt[2]
-                }
+                },
+                position: "right"
               }
-            }
+            },
+            aspectRatio: 2
           }
     }
 }
