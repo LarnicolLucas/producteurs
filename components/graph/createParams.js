@@ -5,8 +5,8 @@ export default function params(params){
         datasets: [{
             label: params.label,
             data: params.data,
-            borderColor: params.color[3],
-            backgroundColor: params.color[3],
+            borderColor: params.color[0],
+            backgroundColor: params.color[0],
             tension: 0.5
         }]
     };
