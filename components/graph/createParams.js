@@ -17,22 +17,22 @@ export default function params(params){
             scales: {
                 x: {
                   ticks: {
-                    color: params.color[2]
+                    color: params.colorTxt[2]
                   }
                 },
                 y: {
                     ticks: {
-                      color: params.color[2]
+                      color: params.colorTxt[2]
                     }
                 }
             },
             plugins : {
                 title:{
-                  color: params.color[2]
+                  color: params.colorTxt[2]
                 },
                 legend: {
                   labels: {
-                    color: params.color[2]
+                    color: params.colorTxt[2]
                   }
                 }
               }

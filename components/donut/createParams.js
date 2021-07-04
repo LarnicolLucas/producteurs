@@ -36,11 +36,11 @@ export default function params(params, ctx){
             },
             plugins : {
               title:{
-                color: params.color[2]
+                color: params.colorTxt[2]
               },
               legend: {
                 labels: {
-                  color: params.color[2]
+                  color: params.colorTxt[2]
                 }
               }
             }

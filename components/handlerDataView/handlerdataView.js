@@ -9,7 +9,8 @@ import createDonut from '../createList/createDonut'
 import createDonutWithoutF5 from '../createList/createDonutWithoutF5'
 import createBar from '../createList/createBar'
 
-import palette from "../palette/paletteGraph"
+import paletteGraph from "../palette/paletteGraph"
+import palette from "../palette/palette"
 import filliereProd from '../listProducteur/listProducteur'
 
 import {useEffect, useState} from 'react'
@@ -20,7 +21,8 @@ export default function Handler(props){
         label: "",
         data: [],
         legends: [],
-        color: palette
+        color: paletteGraph,
+        colorTxt: palette
     });
 
     const items = {
@@ -65,7 +67,8 @@ export default function Handler(props){
                   label: items[props.items].label,
                   data: newList.data,
                   legends: newList.legend,
-                  color: palette
+                  color: paletteGraph,
+                  colorTxt: palette
               });
               
             } catch(err){
