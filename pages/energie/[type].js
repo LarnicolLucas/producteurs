@@ -7,7 +7,8 @@ import palette from '../../components/palette/palette'
 
 import filliereProd from '../../components/listProducteur/listProducteur'
 
-import Handler from '../../components/handlerDataView/handlerdataView'
+import Nav from '../../components/nav/nav'
+import Dashboard from '../../components/dashboard/dashboard'
 
 
 export default function Home() {
@@ -28,28 +29,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section style={style}>
+      <section className={styles.container} style={style}>
+        <Nav />
 
-        <article className={styles.graphContainer}>
-
-          <Handler type={type} items={"graph"} />
-
-        </article>
-        <article className={styles.graphContainer}>
-
-          <Handler type={type} items={"donut"} />
-
-        </article>
-        <article className={styles.graphContainer}>
-
-          <Handler type={type} items={"donutF5"} />
-
-        </article>
-        <article className={styles.graphContainer}>
-
-          <Handler type={type} items={"bar"} />
-
-        </article>
+        <Dashboard type={type}/>
 
       </section>
 
