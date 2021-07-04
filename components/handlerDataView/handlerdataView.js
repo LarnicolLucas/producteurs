@@ -43,7 +43,7 @@ export default function Handler(props){
             template: <Donut datas={data}/>,
             fn : createDonutWithoutF5,
             request: [7, null, 0, 2021],
-            label: `Répartition des points de production raccordé au réseau sans panneaux solaires`
+            label: `Répartition des points sans panneaux solaires`
         },
         bar : {
             template : <Bar datas={data}/>,
