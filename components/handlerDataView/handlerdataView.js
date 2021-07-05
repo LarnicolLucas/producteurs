@@ -13,6 +13,8 @@ import paletteGraph from "../palette/paletteGraph"
 import palette from "../palette/palette"
 import filliereProd from '../listProducteur/listProducteur'
 
+import Loader from "../loader/loader"
+
 import {useEffect, useState} from 'react'
 
 export default function Handler(props){
@@ -24,6 +26,7 @@ export default function Handler(props){
         color: paletteGraph,
         colorTxt: palette
     });
+    const [display, setDisplay] = useState(false)
 
     const items = {
 
@@ -70,6 +73,8 @@ export default function Handler(props){
                   color: paletteGraph,
                   colorTxt: palette
               });
+
+              setDisplay(true)
               
             } catch(err){
               console.log(err)
@@ -78,6 +83,12 @@ export default function Handler(props){
       }, [props.type]);
     
     return <>
+        <section style={{display: display ? "none" : "block"}}>
+
+            <Loader />
+
+        </section>
+        
         {items[props.items].template}
     </>
 }
