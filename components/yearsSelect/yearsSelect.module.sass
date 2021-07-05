@@ -1,0 +1,25 @@
+$radius: 0.5rem
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+.article
+    margin: 1rem
+    padding: 0.6rem 2rem 0.6rem 2rem
+    border-radius: $radius
+    position: relative
+.article::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% - 1px)
+    height: calc(100% - 1px)
+    background: "none"
+    border-radius: $radius
+    transform: scale(1)
+    transition: 0.2s ease-out
+.article:hover::before
+    border: 1px solid black
+    transform: scale(1.2)
