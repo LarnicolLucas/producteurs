@@ -1,15 +1,19 @@
 import styles from './dashboard.module.sass'
+
+import YearsSelect from '../yearsSelect/yearsSelect'
 import Handler from '../../components/handlerDataView/handlerdataView'
 import palette from '../palette/palette'
 
 export default function Dashboard(props){
 
     const fondGraph = {
-        background: palette[4]
+        background: palette[0],
+        color: palette[2]
     }
 
     return <>
         <main className={styles.container}>
+            <YearsSelect />
             <section className={styles.section}>
                 <article style={fondGraph} className={styles.graphContainer}>
 
