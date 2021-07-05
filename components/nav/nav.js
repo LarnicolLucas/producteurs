@@ -8,7 +8,7 @@ export default function Nav(props){
     const newList = list.map(el => Object.assign({}, el, {src: "/images/icons_producteurs/aside/"+el.src.split('/')[3]}));
 
     const style={
-        background: palette[4]
+        background: palette[0]
     }
 
     const elems = newList.map(el => <Pins 
