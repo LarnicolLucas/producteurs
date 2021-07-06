@@ -6,10 +6,10 @@ import Head from 'next/head'
 import palette from '../../components/palette/palette'
 
 import filliereProd from '../../components/listProducteur/listProducteur'
+import Pins from '../../components/pins/pins'
 
 import Nav from '../../components/nav/nav'
 import Dashboard from '../../components/dashboard/dashboard'
-
 
 export default function Home() {
 
@@ -17,9 +17,14 @@ export default function Home() {
   const { type } = router.query;
 
   const style= {
+    background: palette[2],
+    color: palette[0]
+  };
+
+  const styleHeader= {
     background: palette[0],
     color: palette[2]
-  };
+  }
 
   return (
     <>
@@ -29,13 +34,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.header} style={styleHeader}>
+
+        <figure className={styles.figure} >
+
+          <Pins src={"/images/home/home.svg"} title="Accueil" color={palette} link="../"/>  
+
+        </figure>
+
+        <h1 className={styles.titre}>Tableau de bord</h1>
+
+      </header>
+
       <section className={styles.container} style={style}>
         <Nav />
 
         <Dashboard type={type}/>
 
       </section>
-
     </>
 
 
