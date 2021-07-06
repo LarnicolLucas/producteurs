@@ -36,31 +36,31 @@ export default function Handler(props){
         graph : {
             template : <Graph datas={data}/>,
             fn : createList,
-            request: [-1, props.type, 0, 2021],
+            request: [-1, props.type, 0, props.year],
             label: `Evolution du nombre de producteurs de type ${filliereProd[props.type]} raccordé au réseau`
         },
         donut : {
             template :<Donut datas={data}/>,
             fn : createDonut,
-            request: [7, null, 0, 2021],
+            request: [7, null, 0, props.year],
             label: `Répartition des points de production raccordé au réseau`
         },
         donutF5 : {
             template: <Donut datas={data}/>,
             fn : createDonutWithoutF5,
-            request: [7, null, 0, 2021],
+            request: [7, null, 0, props.year],
             label: `Répartition des points sans panneaux solaires`
         },
         bar : {
             template : <Bar datas={data}/>,
             fn : createBar,
-            request: [8, props.type, null, 2021],
+            request: [8, props.type, null, props.year],
             label: `Répartition des points de production de type ${filliereProd[props.type]} selon  leur puissances`
         },
         donutByPower: {
             template : <Donut datas={data}/>,
             fn : createDonutByPower,
-            request: [7, "F0", null, 2021],
+            request: [7, "F0", null, props.year],
             label: `Répartition des points de production selon leur puissances`
         },
     };
@@ -92,7 +92,7 @@ export default function Handler(props){
               console.log(err)
             }
         }
-      }, [props.type]);
+      }, [props.type, props.year]);
     
     return <>
         <section style={{display: display ? "none" : "block"}}>

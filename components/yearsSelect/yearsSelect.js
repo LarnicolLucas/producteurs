@@ -7,6 +7,11 @@ export default function YearsSelect(props){
     const style= {
         color: palette[2],
         background: palette[3]
+    };
+
+    const styleClicked= {
+        color: palette[2],
+        background: palette[0]
     }
 
     const createList = () => {
@@ -26,7 +31,8 @@ export default function YearsSelect(props){
     const list = createList().map(el => <article 
         className={styles.article} 
         key={el.id}
-        style={style}
+        style={props.year == el.date ? styleClicked : style}
+        onClick={()=> props.clickOnYear(el.date)}
         >
             {el.date}
     </article>
