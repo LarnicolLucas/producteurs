@@ -14,6 +14,7 @@ export default function params(params){
         type: 'line',
         data: data,
         options: {
+          aspectRatio: 2,
             scales: {
                 x: {
                   ticks: {
