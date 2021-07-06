@@ -5,13 +5,11 @@ import palette from '../palette/palette'
 
 export default function Nav(props){
 
-    const newList = list.map(el => Object.assign({}, el, {src: "/images/icons_producteurs/aside/"+el.src.split('/')[3]}));
-
     const style={
         background: palette[0]
     }
 
-    const elems = newList.map(el => <Pins 
+    const elems = list.map(el => <Pins 
         key={el.id} 
         src={el.src} 
         title={el.title} 
