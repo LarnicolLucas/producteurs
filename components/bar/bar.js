@@ -2,6 +2,7 @@ import Chart from 'chart.js/auto';
 import {useRef, useEffect} from 'react'
 import Params from './createParams'
 import styles from './bar.module.sass'
+import icons from '../iconLink/iconLink'
 
 export default function Graph(props){
 
@@ -19,6 +20,9 @@ export default function Graph(props){
         <section className={styles.container}>
             <figcaption className={styles.figcaption}>
 
+                <figure className={styles.logoFigure}>
+                    <img className={styles.logoImg} src={icons[props.type]} />
+                </figure>
                 <h3>{props.datas.label}</h3>
 
             </figcaption>
