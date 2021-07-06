@@ -11,13 +11,15 @@ import Pins from '../../components/pins/pins'
 import Nav from '../../components/nav/nav'
 import Dashboard from '../../components/dashboard/dashboard'
 
+import Footer from '../../components/footer/footer'
+
 export default function Home() {
 
   const router = useRouter();
   const { type } = router.query;
 
   const style= {
-    background: palette[2],
+    background: palette[0],
     color: palette[0]
   };
 
@@ -52,6 +54,9 @@ export default function Home() {
         <Dashboard type={type}/>
 
       </section>
+
+      <Footer />
+      
     </>
 
 
