@@ -1,20 +1,22 @@
 import styles from './logo.module.sass'
+import Link from 'next/link'
 
 
 
 export default function Header(props){
     return <>
-        <article className={styles.container}>
-        <figure className={styles.figure}>
+        <Link href="https://www.llarnicol.com/">
+            <article className={styles.container}>
+            <figure className={styles.figure}>
 
-            <img className={styles.img} src="/images/logo/logo.svg" />
+                <img className={styles.img} src="/images/logo/logo.svg" />
 
-        </figure>
-        <figcaption className={styles.txt}>
-            Lucas Larnicol
-        </figcaption>
+            </figure>
+            <figcaption className={styles.txt}>
+                Lucas Larnicol
+            </figcaption>
 
-        </article>
-        
+            </article>
+        </Link>
     </>
 }
