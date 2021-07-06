@@ -37,31 +37,31 @@ export default function Handler(props){
             template : <Graph datas={data} type={props.type}/>,
             fn : createList,
             request: [-1, props.type, 0, props.year],
-            label: `Evolution du nombre de producteurs de type ${filliereProd[props.type]} raccordé au réseau`
+            label: `Evolution du nombre de producteurs de type ${filliereProd[props.type]} en ${props.year}`
         },
         donut : {
             template :<Donut datas={data} type={props.type}/>,
             fn : createDonut,
             request: [7, null, 0, props.year],
-            label: `Répartition des points de production raccordé au réseau`
+            label: `Répartition des producteurs raccordé au réseau en ${props.year}`
         },
         donutF5 : {
             template: <Donut datas={data} type={props.type}/>,
             fn : createDonutWithoutF5,
             request: [7, null, 0, props.year],
-            label: `Répartition des points sans panneaux solaires`
+            label: `Répartition des points sans panneaux solaires en ${props.year}`
         },
         bar : {
             template : <Bar datas={data} type={props.type}/>,
             fn : createBar,
             request: [8, props.type, null, props.year],
-            label: `Répartition des points de production de type ${filliereProd[props.type]} selon  leur puissances`
+            label: `Répartition des producteurs de type ${filliereProd[props.type]} selon  leur puissances en ${props.year}`
         },
         donutByPower: {
             template : <Donut datas={data} type={props.type}/>,
             fn : createDonutByPower,
             request: [8, "F0", null, props.year],
-            label: `Répartition des points de production selon leur puissances`
+            label: `Répartition des producteurs selon leur puissances en ${props.year}`
         },
     };
 
