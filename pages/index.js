@@ -6,6 +6,7 @@ import Header from '../components/header/header'
 
 import EnergieSelect from '../components/energies/energieSlect/energieSelect'
 import Footer from '../components/footer/footer'
+import Info from '../components/info/info'
 
 
 export default function Home() {
@@ -35,6 +36,8 @@ export default function Home() {
         <Header data={data} color={palette}/>
 
         <EnergieSelect color={palette}/>
+
+        <Info />
 
         <Footer />
 
