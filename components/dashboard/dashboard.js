@@ -5,7 +5,6 @@ import {useState} from 'react'
 import YearsSelect from '../yearsSelect/yearsSelect'
 import Handler from '../../components/handlerDataView/handlerdataView'
 import palette from '../palette/palette'
-import Footer from '../footer/footer'
 
 export default function Dashboard(props){
 
@@ -14,11 +13,15 @@ export default function Dashboard(props){
         color: palette[2]
     };
 
+    const fondDashboard= {
+        background: palette[2]
+    }
+
     const [selectedYear, setSelectedYear] = useState("2021");
     const clickOnYear = (year)=> setSelectedYear(year)
 
     return <>
-        <main className={styles.container}>
+        <main style={fondDashboard} className={styles.container}>
 
             <YearsSelect clickOnYear={clickOnYear} year={selectedYear} />
 
@@ -56,8 +59,6 @@ export default function Dashboard(props){
 
                 </article>
             </section>
-            
-            <Footer />
         </main>
     </>
 }
