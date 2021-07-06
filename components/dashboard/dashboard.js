@@ -3,6 +3,7 @@ import styles from './dashboard.module.sass'
 import YearsSelect from '../yearsSelect/yearsSelect'
 import Handler from '../../components/handlerDataView/handlerdataView'
 import palette from '../palette/palette'
+import Footer from '../footer/footer'
 
 export default function Dashboard(props){
 
@@ -40,6 +41,7 @@ export default function Dashboard(props){
 
                 </article>
             </section>
+            <Footer />
         </main>
     </>
 }
