@@ -34,33 +34,33 @@ export default function Handler(props){
     const items = {
 
         graph : {
-            template : <Graph datas={data}/>,
+            template : <Graph datas={data} type={props.type}/>,
             fn : createList,
             request: [-1, props.type, 0, props.year],
             label: `Evolution du nombre de producteurs de type ${filliereProd[props.type]} raccordé au réseau`
         },
         donut : {
-            template :<Donut datas={data}/>,
+            template :<Donut datas={data} type={props.type}/>,
             fn : createDonut,
             request: [7, null, 0, props.year],
             label: `Répartition des points de production raccordé au réseau`
         },
         donutF5 : {
-            template: <Donut datas={data}/>,
+            template: <Donut datas={data} type={props.type}/>,
             fn : createDonutWithoutF5,
             request: [7, null, 0, props.year],
             label: `Répartition des points sans panneaux solaires`
         },
         bar : {
-            template : <Bar datas={data}/>,
+            template : <Bar datas={data} type={props.type}/>,
             fn : createBar,
             request: [8, props.type, null, props.year],
             label: `Répartition des points de production de type ${filliereProd[props.type]} selon  leur puissances`
         },
         donutByPower: {
-            template : <Donut datas={data}/>,
+            template : <Donut datas={data} type={props.type}/>,
             fn : createDonutByPower,
-            request: [7, "F0", null, props.year],
+            request: [8, "F0", null, props.year],
             label: `Répartition des points de production selon leur puissances`
         },
     };
