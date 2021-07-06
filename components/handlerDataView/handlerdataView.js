@@ -8,6 +8,7 @@ import createList from '../createList/createList'
 import createDonut from '../createList/createDonut'
 import createDonutWithoutF5 from '../createList/createDonutWithoutF5'
 import createBar from '../createList/createBar'
+import createDonutByPower from "../createList/createDonutByPower"
 
 import paletteGraph from "../palette/paletteGraph"
 import palette from "../palette/palette"
@@ -55,7 +56,13 @@ export default function Handler(props){
             fn : createBar,
             request: [8, props.type, null, 2021],
             label: `Répartition des points de production de type ${filliereProd[props.type]} selon  leur puissances`
-        }
+        },
+        donutByPower: {
+            template : <Donut datas={data}/>,
+            fn : createDonutByPower,
+            request: [7, "F0", null, 2021],
+            label: `Répartition des points de production selon leur puissances`
+        },
     };
 
     useEffect(async ()=>{

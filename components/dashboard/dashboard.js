@@ -41,6 +41,15 @@ export default function Dashboard(props){
 
                 </article>
             </section>
+            <section className={styles.section}>
+            
+                <article style={fondGraph} className={styles.graphContainer}>
+
+                    <Handler type={props.type} items={"donutByPower"} />
+
+                </article>
+            </section>
+            
             <Footer />
         </main>
     </>
