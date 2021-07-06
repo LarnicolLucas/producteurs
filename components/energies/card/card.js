@@ -1,8 +1,11 @@
 import styles from './card.module.sass'
+import Link from 'next/link'
+
 export default function Card(props){
     return <>
-        <section>
-            <a className={styles.container} href={`/energie/${props.link}`}>
+        <Link href={`/energie/${props.link}`}>
+            <section className={styles.container}>
+            
                 <figure className={styles.figure}>
                     <img className={styles.img} src={props.src} />
                 </figure>
@@ -11,7 +14,8 @@ export default function Card(props){
                     <p className={styles.p} style={{color: props.color[1]}}>{props.description}</p>
                     
                 </figcaption>
-            </a>
-        </section>
+            
+            </section>
+        </Link>
     </>
 }
