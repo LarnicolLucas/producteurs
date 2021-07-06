@@ -19,13 +19,15 @@ import {useEffect, useState} from 'react'
 
 export default function Handler(props){
 
-    const [data, setData] = useState({
+    const emptyData = {
         label: "",
         data: [],
         legends: [],
         color: paletteGraph,
         colorTxt: palette
-    });
+    }
+
+    const [data, setData] = useState(emptyData);
     const [display, setDisplay] = useState(false)
 
     const items = {
@@ -59,6 +61,9 @@ export default function Handler(props){
     useEffect(async ()=>{
 
         if(props.type != undefined){ 
+
+            setDisplay(false);
+            setData(emptyData);
     
           try{
               const res = await fetch(Requete(...items[props.items].request));
