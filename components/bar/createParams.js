@@ -12,6 +12,11 @@ export default function params(params){
         type: 'bar',
         data: data,
         options: {
+            plugins:{
+                legend: {
+                    display: false,
+                }
+            },
             scales: {
                 x: {
                   ticks: {

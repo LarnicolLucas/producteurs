@@ -3,7 +3,7 @@ export default function params(params){
     const data = {
         labels: params.legends,
         datasets: [{
-            label: "",
+            label: "test",
             data: params.data,
             borderColor: params.color[0],
             backgroundColor: params.color[0],
@@ -33,8 +33,8 @@ export default function params(params){
                   color: params.colorTxt[2]
                 },
                 legend: {
+                  display: false,
                   labels: {
-                    
                     color: params.colorTxt[2]
                   }
                 }
