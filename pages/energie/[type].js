@@ -49,7 +49,7 @@ export default function Home() {
       </header>
 
       <section className={styles.container} style={style}>
-        <Nav />
+        <Nav type={type}/>
 
         <Dashboard type={type}/>
 

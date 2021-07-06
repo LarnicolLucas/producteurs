@@ -16,6 +16,7 @@ export default function Nav(props){
         description={el.description} 
         color={palette} 
         link={el.link}
+        selected={props.type == el.link ? true : false}
     />)
 
     return <>

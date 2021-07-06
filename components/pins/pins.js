@@ -6,9 +6,15 @@ export default function Card(props){
     const style= {
         color: palette[2]
     }
+    const styleSelected ={
+        color: palette[0],
+        background: palette[2]
+    }
+
+    //console.log(props.selected)
     return <>
         <Link href={`/energie/${props.link}`}>
-            <section style={style} className={styles.container}>
+            <section style={props.selected ? styleSelected : style} className={styles.container}>
 
                 <figure className={styles.figure}>
                     <img className={styles.img} src={props.src} />
