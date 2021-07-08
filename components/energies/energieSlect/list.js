@@ -3,14 +3,14 @@ const List = [
         id: 0, 
         src: "/images/icons_producteurs/aside/eolienne.svg", 
         title: "Eolien", 
-        description: "Client diposant d&apos;un moyen de production de type éolien.",
+        description: "Client diposant d'un moyen de production de type éolien.",
         link: "F4"
     },
     {
         id: 1, 
         src: "/images/icons_producteurs/aside/hydrolique.svg", 
         title: "Hydrolique", 
-        description: "Point de production au moyen d&apos;un générateur hydrolique",
+        description: "Point de production au moyen d'un générateur hydrolique",
         link: "F3"
     },
     {
