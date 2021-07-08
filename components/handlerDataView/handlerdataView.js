@@ -65,8 +65,7 @@ export default function Handler(props){
         },
     };
 
-    useEffect(async ()=>{
-
+    const ApiCall = async ()=> {
         if(props.type != undefined){ 
 
             setDisplay(false);
@@ -92,6 +91,12 @@ export default function Handler(props){
               console.log(err)
             }
         }
+    }
+
+    useEffect(()=>{
+
+        ApiCall()
+        
       }, [props.type, props.year]);
     
     return <>
