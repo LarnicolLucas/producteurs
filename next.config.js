@@ -1,9 +1,10 @@
 module.exports = {
   reactStrictMode: true,
   images:{
+    loader: "imgix",
+    path: "https://main.dv3k8sumz2a23.amplifyapp.com/",
     domains:[
-      'https://producteur.s3.eu-west-3.amazonaws.com',
-      'localhost:3000'
+      "main.dv3k8sumz2a23.amplifyapp.com/"
     ]
   }
 }
