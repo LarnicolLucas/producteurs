@@ -1,6 +1,7 @@
 import styles from './pins.module.sass'
 import palette from '../palette/palette'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Card(props){
     const style= {
@@ -11,13 +12,17 @@ export default function Card(props){
         background: palette[2]
     }
 
+    const imgSrc= props.src == undefined ? "/" : props.src;
+
     //console.log(props.selected)
     return <>
         <Link href={`/energie/${props.link}`} passHref>
             <section style={props.selected ? styleSelected : style} className={styles.container}>
 
                 <figure className={styles.figure}>
-                    <img className={styles.img} src={props.src} />
+                    <article className={styles.img}>
+                        <Image src={imgSrc} alt='Pins Nav Logo energie' layout="fill" />
+                    </article>
                 </figure>
                 <figcaption className={styles.title}>
                     {props.title}           
