@@ -3,11 +3,14 @@ import {useRef, useEffect} from 'react'
 import Params from './createParams'
 import styles from './bar.module.sass'
 import icons from '../iconLink/iconLink'
+import Image from 'next/image.js'
 
 export default function Graph(props){
 
     const canvas = useRef();
     const params = Params(props.datas);
+
+    const imgSrc = props.type == undefined ? '/' : icons[props.type];
     
     useEffect(()=> {
 
@@ -21,7 +24,7 @@ export default function Graph(props){
             <figcaption className={styles.figcaption}>
 
                 <figure className={styles.logoFigure}>
-                    <img className={styles.logoImg} src={icons[props.type]} />
+                    <Image className={styles.logoImg} src={imgSrc} layout="fill" />
                 </figure>
                 <h3>{props.datas.label}</h3>
 
