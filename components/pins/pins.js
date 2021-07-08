@@ -13,7 +13,7 @@ export default function Card(props){
 
     //console.log(props.selected)
     return <>
-        <Link href={`/energie/${props.link}`}>
+        <Link href={`/energie/${props.link}`} passHref>
             <section style={props.selected ? styleSelected : style} className={styles.container}>
 
                 <figure className={styles.figure}>

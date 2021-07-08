@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Header(props){
     return <>
-        <Link href="https://www.llarnicol.com/">
+        <Link href="https://www.llarnicol.com/" passHref>
             <article className={styles.container}>
             <figure className={styles.figure}>
 

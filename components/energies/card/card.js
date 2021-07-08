@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Card(props){
     return <>
-        <Link href={`/energie/${props.link}`}>
+        <Link href={`/energie/${props.link}`} passHref>
             <section className={styles.container}>
             
                 <figure className={styles.figure}>
