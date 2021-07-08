@@ -24,7 +24,7 @@ export default function Graph(props){
             <figcaption className={styles.figcaption}>
 
                 <figure className={styles.logoFigure}>
-                    <Image className={styles.logoImg} src={imgSrc} layout="fill" />
+                    <Image className={styles.logoImg} src={imgSrc} alot='Icon energie selected' layout="fill" />
                 </figure>
                 <h3>{props.datas.label}</h3>
 
