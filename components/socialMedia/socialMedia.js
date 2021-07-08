@@ -8,7 +8,7 @@ export default function socialMedia(props){
         {id: 1, src: "/images/socialMedia/linkdin.svg", link: "https://www.linkedin.com/in/lucas-larnicol-52a995201/"},
         {id: 2, src: "/images/socialMedia/openData.svg", link: "https://data.enedis.fr/pages/accueil/?id=init"},
         {id: 3, src: "/images/socialMedia/web.svg", link: "https://www.llarnicol.com/"}
-    ].map(el => <Link key={el.id} href={el.link} passHref><figure className={styles.figure} passHref>
+    ].map(el => <Link key={el.id} href={el.link} passHref><figure className={styles.figure}>
         <img className={styles.img} src={el.src} />
     </figure></Link>)
     
