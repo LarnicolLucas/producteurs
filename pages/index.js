@@ -31,6 +31,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div>TEST</div>
+
       <section style={style}>
 
         <Header data={data} color={palette}/>
