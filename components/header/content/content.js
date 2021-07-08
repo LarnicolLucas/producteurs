@@ -1,5 +1,5 @@
 import styles from './content.module.sass'
-
+import Image from 'next/image'
 
 
 export default function Content(props){
@@ -8,7 +8,9 @@ export default function Content(props){
 
         <section className={styles.container}>
             <figure className={styles.figure}>
-                <img src="/images/head/illustration0.svg" className={styles.img}/>
+                <article>
+                    <Image src="/images/head/illustration0.svg" alt='Left illustration' layout="fill" />
+                </article>
             </figure>
             <main className={styles.main}>
 
@@ -19,11 +21,15 @@ export default function Content(props){
                     {props.data.description}
                 </p>
                 <figure className={styles.figure2}>
-                    <img src="/images/head/illustration05.svg" className={styles.img}/>
+                    <article>
+                        <Image src="/images/head/illustration05.svg" alt='Decorative middle illustration' layout="fill" />
+                    </article>
                 </figure>
             </main>
             <figure className={styles.figure+" "+styles.hide}>
-                <img src="/images/head/illustration1.svg" className={styles.img}/>
+                <article>
+                    <Image src="/images/head/illustration1.svg" alt='Right illustration' layout="fill" />
+                </article>
             </figure>
         </section>
         
