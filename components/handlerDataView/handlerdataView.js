@@ -94,9 +94,9 @@ export default function Handler(props){
                 }
             }
         };
-        ApiCall()
+        ApiCall();
         
-      }, [props.type, props.year]);
+      }, [props.type, props.year, props.items]);
     
     return <>
         <section style={{display: display ? "none" : "block"}}>
