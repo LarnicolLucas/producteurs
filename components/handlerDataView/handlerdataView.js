@@ -65,36 +65,35 @@ export default function Handler(props){
         },
     };
 
-    const ApiCall = async ()=> {
-        if(props.type != undefined){ 
-
-            setDisplay(false);
-            setData(emptyData);
-    
-          try{
-              const res = await fetch(Requete(...items[props.items].request));
-              const data = await res.json();
-    
-              const newList = items[props.items].fn(data.records);
-    
-              setData({
-                  label: items[props.items].label,
-                  data: newList.data,
-                  legends: newList.legend,
-                  color: paletteGraph,
-                  colorTxt: palette
-              });
-
-              setDisplay(true)
-              
-            } catch(err){
-              console.log(err)
-            }
-        }
-    }
-
     useEffect(()=>{
 
+        const ApiCall = async ()=> {
+            if(props.type != undefined){ 
+    
+                setDisplay(false);
+                setData(emptyData);
+        
+              try{
+                  const res = await fetch(Requete(...items[props.items].request));
+                  const data = await res.json();
+        
+                  const newList = items[props.items].fn(data.records);
+        
+                  setData({
+                      label: items[props.items].label,
+                      data: newList.data,
+                      legends: newList.legend,
+                      color: paletteGraph,
+                      colorTxt: palette
+                  });
+    
+                  setDisplay(true)
+                  
+                } catch(err){
+                  console.log(err)
+                }
+            }
+        };
         ApiCall()
         
       }, [props.type, props.year]);
