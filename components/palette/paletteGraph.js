@@ -1,10 +1,18 @@
-const paletteGraph = [
-    "hsla(27, 100%, 71%, 0.8)",
-    "hsla(60, 100%, 71%, 0.8)",
-    "hsla(130, 100%, 71%, 0.8)",
-    "hsla(188, 100%, 71%, 0.8)",
-    "hsla(276, 100%, 71%, 0.8)",
-    "hsla(330, 100%, 71%, 0.8)"
-]
 
+
+const createPastels = (nb, saturation, light) => {
+
+    const recursive = (index, nb, res, params) => index > nb ? 
+        res :
+        recursive(index + 1, nb, res.concat(
+            `hsl(${
+                Math.floor(((360/nb) * index))
+            }, ${params.saturation}%, ${params.light}%)`
+        ), params)
+    ;
+
+    return recursive(0, nb, [], {saturation: saturation, light: light})
+}
+
+const paletteGraph = createPastels(7, 100, 85);
 export default paletteGraph
