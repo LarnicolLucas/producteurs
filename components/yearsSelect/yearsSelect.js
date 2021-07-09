@@ -5,8 +5,8 @@ export default function YearsSelect(props){
 
 
     const style= {
-        color: palette[2],
-        background: palette[3]
+        color: palette[0],
+        background: "none"
     };
 
     const styleClicked= {
