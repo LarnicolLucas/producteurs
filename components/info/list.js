@@ -14,7 +14,7 @@ const list = [
         id: 1, 
         src: "/images/block/1.svg", 
         titre: "Open Data", 
-        description1: "Les données exploité sont issus du site officiel d'ENEDIS open DATA qui permet la ré-utilisation des données numériques",
+        description1: "Les données exploités sont issus du site officiel d'ENEDIS open DATA qui permet la ré-utilisation des données numériques",
         description2: "L'exploitation est permise grace à la license libre",
         color: palette[3],
         txt2Color: palette[2]
