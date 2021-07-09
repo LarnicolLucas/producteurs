@@ -1,12 +1,14 @@
 export default function params(params, ctx){
 
+  const padding= 25;
+
     const data = {
         labels: params.legends,
         datasets: [{
             label: params.label,
             data: params.data,
             backgroundColor: params.color,
-            hoverOffset: 25
+            hoverOffset: padding
         }]
     };
     let delayed;
@@ -45,7 +47,10 @@ export default function params(params, ctx){
                 position: "right"
               }
             },
-            aspectRatio: 2
+            aspectRatio: 2,
+            layout: {
+              padding: padding
+            }
           }
     }
 }
