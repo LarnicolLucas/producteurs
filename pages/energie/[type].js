@@ -13,6 +13,8 @@ import Dashboard from '../../components/dashboard/dashboard'
 
 import Footer from '../../components/footer/footer'
 
+import Image from 'next/image'
+
 export default function Home() {
 
   const router = useRouter();
@@ -45,6 +47,12 @@ export default function Home() {
         </figure>
 
         <h1 className={styles.titre}>Tableau de bord</h1>
+
+        <figure className={styles.menuButton}>
+          <article className={styles.imgMenu}>
+            <Image src="/images/navMobile/menu.svg" alt='Button Menu' layout="fill" />
+          </article>
+        </figure>
 
       </header>
 
