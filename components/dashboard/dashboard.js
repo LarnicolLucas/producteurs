@@ -27,7 +27,6 @@ export default function Dashboard(props){
 
             <section className={styles.section}>
                 <article style={fondGraph} className={styles.graphContainer}>
-
                     <Handler type={props.type} items={"graph"} year={selectedYear} />
 
                 </article>

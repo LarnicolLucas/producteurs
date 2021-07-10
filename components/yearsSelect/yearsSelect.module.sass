@@ -3,14 +3,16 @@ $radius: 0.5rem
     display: flex
     justify-content: center
     align-items: center
+    align-self: flex-end
     cursor: pointer
     width: auto
     background: #fff
-    align-self: flex-end
     position: sticky
     top: 0
+    right: 0
     z-index: 100
     border-radius: 0 0 0 $radius
+
 .article
     padding: 0.6rem 2rem 0.6rem 2rem
     border-radius: 0 0 $radius $radius
@@ -28,3 +30,6 @@ $radius: 0.5rem
     border-left: 1px solid black
     border-bottom: 1px solid black
     border-right: 1px solid black
+@media screen and ( max-width:  900px)
+    .article
+        padding: 0.3rem 1rem 0.3rem 1rem
