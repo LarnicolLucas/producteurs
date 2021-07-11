@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import {useState} from 'react'
 
 import styles from './energie.module.sass'
 
@@ -15,6 +16,8 @@ import Footer from '../../components/footer/footer'
 
 import Image from 'next/image'
 
+import MobileNavBAr from '../../components/mobilNavBar/mobileNavBar'
+
 export default function Home() {
 
   const router = useRouter();
@@ -28,7 +31,10 @@ export default function Home() {
   const styleHeader= {
     background: palette[0],
     color: palette[2]
-  }
+  };
+
+  const [navMenu, setNavMenu] = useState(false);
+  const closeMenu = ()=> setNavMenu(false);
 
   return (
     <>
@@ -48,7 +54,7 @@ export default function Home() {
 
         <h1 className={styles.titre}>Tableau de bord</h1>
 
-        <figure className={styles.menuButton}>
+        <figure className={styles.menuButton} onClick={()=> setNavMenu(true)}>
           <article className={styles.imgMenu}>
             <Image src="/images/navMobile/menu.svg" alt='Button Menu' layout="fill" />
           </article>
@@ -64,6 +70,8 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      <MobileNavBAr navMenu={navMenu} closeMenu={closeMenu}/>
       
     </>
 
