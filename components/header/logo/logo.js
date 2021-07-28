@@ -10,9 +10,9 @@ export default function Header(props){
             <article className={styles.container}>
             <figure className={styles.figure}>
                 
-                <article>
-                    <Image src="/images/logo/logo.svg" alt='Logo Lucas Larnicol' layout="fill" />
-                </article>
+                
+                <Image src="/images/logo/logo.svg" alt='Logo Lucas Larnicol' layout="fill" />
+                
 
             </figure>
             <figcaption className={styles.txt}>
